@@ -1,0 +1,8 @@
+name: MiningMcmmo
+main: GlacierShard92\MiningMcmmo\Main
+version: 1.0.0
+api: 2.0.0
+author: GlacierShard92
+commands:
+  mining:
+   description: Shows your Mining MCMMO!
