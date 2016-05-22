@@ -1,6 +1,6 @@
 <?php
 
-namespace GlacierShard92\Mining
+namespace GlacierShard92\MiningMcmmo
 
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
