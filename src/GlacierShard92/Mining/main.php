@@ -27,4 +27,29 @@ class Main extends PluginBase implements Listener{
    $breaks = $breakdata->get($name);
        $breakdata->set($name,$breaks+1);
        $breakdata->save();
-       ***FINISH LATER***
+       if($this->$name,$breaks == 64){
+          $event->getPlayer()->sendMessage(C::YELLOW . "ERPE MCMMO - Mining skill increased by 1 by mining 64 blocks!");
+          $event->getPlayer()->sendMessage(C::YELLOW . "ERPE MCMMO - You now have 32 Bottle o' Enchanting in your inventory!");
+          $this->getServer()->dispatchCommand("give $name 384 32");
+          
+       }else{
+          $this->getServer()->dispatchCommand("give $name 384 32");
+       }
+  public funtion onCommand(CommandSender $s, Command $cmd, $label, array $args){
+        if($cmd->getName() == "mining"){
+          if($s instanceof Player){
+          if(count($args) == 0) {
+            $breakfile = new Config($this->getDataFolder() . "/breaks.yml", Config::YAML);
+            $breaks = $breakfile->get($s->getName());
+            $miningstats = C::YELLOW . "§lYour Mining McMMO:§r§b $breaks";
+            $s->sendMessage($miningstats);
+          }
+          if(count($args) == 1){
+            $player = $args[0];
+            $breakfile = new Config($this->getDataFolder() . "/breaks.yml", Config::YAML);
+            $breaks = $breakfile->get($player);
+            $miningstats = C::YELLOW . C::BOLD . $args[0] . "'s' Mining McMMO:§r§b $breaks";
+          }
+        }
+  }
+}
