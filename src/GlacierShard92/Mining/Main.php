@@ -27,7 +27,7 @@ class Main extends PluginBase implements Listener{
    $breaks = $breakfile->get($name);
        $breakfile->set($name,$breaks+1);
        $breakfile->save();
-       if($this->$name,$breaks == 64){
+       if($breaks == 64){
           $event->getPlayer()->sendMessage(C::YELLOW . "ERPE MCMMO - Mining skill increased by 1 by mining 64 blocks!");
           $event->getPlayer()->sendMessage(C::YELLOW . "ERPE MCMMO - You now have 32 Bottle o' Enchanting in your inventory!");
           $this->getServer()->dispatchCommand(new ConsoleCommandSender(), "give " . $name . "384 32");
