@@ -21,7 +21,6 @@ class Main extends PluginBase implements Listener{
           $this->saveResource("breaks.yml");
           @mkdir($this->getDataFolder());
           $breakfile = new Config($this->getDataFolder() . "/breaks.yml", Config::YAML);
-          $breakfile->save();
   }
   public function OnBreak(BlockBreakEvent $event){
    $name = $event->getPlayer()->getName();
