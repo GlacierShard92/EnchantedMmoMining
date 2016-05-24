@@ -24,7 +24,7 @@ class Main extends PluginBase implements Listener{
   }
   public function OnBreak(BlockBreakEvent $event){
    $name = $event->getPlayer()->getName();
-   $breaks = $breakdata->get($name);
+   $breaks = $breakfile->get($name);
        $breakfile->set($name,$breaks+1);
        $breakfile->save();
        if($this->$name,$breaks == 64){
