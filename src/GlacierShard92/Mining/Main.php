@@ -12,7 +12,7 @@ use pocketmine\command\{ConsoleCommandSender, Command, CommandSender};
 
 use pocketmine\item\Item;
 use pocketmine\utils\TextFormat as C;
-use pocketmine\utils\Config
+use pocketmine\utils\Config;
 
 class Main extends PluginBase implements Listener {
   public function OnEnable(){
