@@ -14,7 +14,7 @@ use pocketmine\item\Item;
 use pocketmine\utils\TextFormat as C;
 use pocketmine\utils\Config
 
-class Main extends PluginBase implements Listener{
+class Main extends PluginBase implements Listener {
   public function OnEnable(){
           $this->getServer()->getPluginManager()->registerEvents($this, $this);
           $this->getLogger()->info(C::AQUA . "EnchantedMcMMO> Mining BETA ENABLED!");
