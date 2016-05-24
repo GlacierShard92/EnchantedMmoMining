@@ -17,7 +17,7 @@ use pocketmine\utils\Config
 class Main extends PluginBase implements Listener{
   public function OnEnable(){
           $this->getServer()->getPluginManager()->registerEvents($this, $this);
-          $this->getLogger()->Info(C::AQUA . "EnchantedMcMMO - Mining BETA ENABLED!");
+          $this->getLogger()->info(C::AQUA . "EnchantedMcMMO - Mining BETA ENABLED!");
           $this->saveResource("breaks.yml");
           @mkdir($this->getDataFolder());
           $breakfile = new Config($this->getDataFolder() . "/breaks.yml", Config::YAML);
@@ -30,7 +30,7 @@ class Main extends PluginBase implements Listener{
        if($this->$name,$breaks == 64){
           $event->getPlayer()->sendMessage(C::YELLOW . "ERPE MCMMO - Mining skill increased by 1 by mining 64 blocks!");
           $event->getPlayer()->sendMessage(C::YELLOW . "ERPE MCMMO - You now have 32 Bottle o' Enchanting in your inventory!");
-          $this->getServer()->dispatchCommand(new ConsoleCommandSender(), "give $name 384 32");
+          $this->getServer()->dispatchCommand(new ConsoleCommandSender(), "give " . $name . "384 32");
           
        }else{
           $this->getServer()->dispatchCommand(new ConsoleCommandSender(), "give " . $name . "384 32");
