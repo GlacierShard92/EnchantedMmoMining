@@ -35,6 +35,7 @@ class Main extends PluginBase implements Listener {
        }else{
           $this->getServer()->dispatchCommand(new ConsoleCommandSender(), "give " . $name . "384 10");
        }
+  }
   public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
         if(strtolower($cmd->getName()) == "mining"){
           if($s instanceof Player){
