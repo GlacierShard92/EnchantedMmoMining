@@ -43,11 +43,13 @@ class Main extends PluginBase implements Listener {
             $breaks = $this->breakfile->get($s->getName());
             $miningstats = C::YELLOW . "§lYour Mining McMMO:§r§b $breaks";
             $s->sendMessage($miningstats);
+            return;
           }
           if(count($args) == 1){
             $player = $args[0];
             $breaks = $this->breakfile->get($player);
             $miningstats = C::YELLOW . C::BOLD . $args[0] . "'s' Mining McMMO:§r§b $breaks";
+            return;
           }
         }
   }
