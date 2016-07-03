@@ -1,6 +1,6 @@
 <?php
 
-namespace GlacierShard92\Mining;
+namespace Mining;
 
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
@@ -9,6 +9,7 @@ use pocketmine\plugin\Plugin;
 use pocketmine\Server;
 use pocketmine\Player;
 use pocketmine\command\{ConsoleCommandSender, Command, CommandSender};
+use pocketmine\event\block\BlockBreakEvent;
 
 use pocketmine\item\Item;
 use pocketmine\utils\TextFormat as C;
@@ -17,7 +18,7 @@ use pocketmine\utils\Config;
 class Main extends PluginBase implements Listener {
   public function OnEnable(){
           $this->getServer()->getPluginManager()->registerEvents($this, $this);
-          $this->getLogger()->info(C::AQUA . "EnchantedMcMMO> Mining BETA ENABLED!");
+          $this->getLogger()->info(C::AQUA . "ERPE Mining McMMO Enabled.");
           $this->saveResource("breaks.yml");
           @mkdir($this->getDataFolder());
           $this->breakfile = new Config($this->getDataFolder() . "/breaks.yml", Config::YAML);
@@ -27,9 +28,9 @@ class Main extends PluginBase implements Listener {
    $breaks = $this->breakfile->get($name);
        $this->breakfile->set($name,$breaks+1);
        $this->breakfile->save();
-       if($breaks == 64){
-          $event->getPlayer()->sendMessage(C::YELLOW . "ERPE MCMMO>  Mining skill increased by 1 by mining 64 blocks!");
-          $event->getPlayer()->sendMessage(C::YELLOW . "ERPE MCMMO> You now have 10 Bottles o' Enchanting in your inventory!");
+       if($breaks == 20){
+          $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
+          $event->getPlayer()->sendMessage("§aMining level now level 1! You've recieved 10 xp bottles in return!");
           $this->getServer()->dispatchCommand(new ConsoleCommandSender(), "give " . $name . "384 10");
           
        }else{
@@ -41,14 +42,15 @@ class Main extends PluginBase implements Listener {
           if($s instanceof Player){
           if(count($args) == 0) {
             $breaks = $this->breakfile->get($s->getName());
-            $miningstats = C::YELLOW . "§lYour Mining McMMO:§r§b $breaks";
-            $s->sendMessage($miningstats);
+            $s->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
+            $s->sendMessage("§e§lYour Broken Blocks:§r§b " . $breaks);
             return;
           }
           if(count($args) == 1){
             $player = $args[0];
             $breaks = $this->breakfile->get($player);
-            $miningstats = C::YELLOW . C::BOLD . $args[0] . "'s' Mining McMMO:§r§b $breaks";
+            $s->sendMessage("§e§l[§r§eERPE Mining McMMO§e§l]");
+            $s->sendMessage("e§l " . $args[0] . "'s Broken Blocks:§r§b " . $breaks);
             return;
           }
         }
