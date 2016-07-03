@@ -32,20 +32,20 @@ class Main extends PluginBase implements Listener {
        if($breaks == 20){
           $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
           $event->getPlayer()->sendMessage("§aMining level now level 1! You've recieved 10 xp bottles!");
-          $inventory->addItem(Item::(384,0,10));
+          $inventory->addItem(Item::get(384,0,10));
         if($breaks = 45){
           $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
           $event->getPlayer()->sendMessage("§aMining level now level 2! You've recieved 5 iron ingots!");
-          $inventory->addItem(Item::(265,0,5));
+          $inventory->addItem(Item::get(265,0,5));
         if($breaks = 60){
           $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
           $event->getPlayer()->sendMessage("§aMining Level now level 3! You've recieved 3 Basic Crate Keys!");
-          $inventory->addItem(Item::(341,0,3));
+          $inventory->addItem(Item::get(341,0,3));
         if($breaks = 100){
           $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
           $event->getPlayer()->sendMessage("§aMining Level now level 4! You've recieved 10 Diamonds!");
           $event->getPlayer()->sendMessage("§bCONGRATS! You reached the max level for the Beta! More mining levels to come in the next update!");
-          $inventory->addItem(Item::(364,0,10));
+          $inventory->addItem(Item::get(364,0,10));
         }
       }
     }
