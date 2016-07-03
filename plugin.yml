@@ -1,5 +1,5 @@
-name: MiningMcmmo
-main: GlacierShard92\Mining\Main
+name: MiningMcmmoERPE
+main: Mining\Main
 version: 1.0.0
 api: 2.0.0
 author: GlacierShard92
