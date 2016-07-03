@@ -47,9 +47,6 @@ class Main extends PluginBase implements Listener {
           $event->getPlayer()->sendMessage("§bCONGRATS! You reached the max level for the Beta! More mining levels to come in the next update!");
           $inventory->addItem(Item::get(364,0,10));
         }
-      }
-    }
- }
   public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
         if(strtolower($cmd->getName()) == "mining"){
           if($s instanceof Player){
