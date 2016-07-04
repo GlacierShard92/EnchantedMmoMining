@@ -24,6 +24,7 @@ class Main extends PluginBase implements Listener {
           $this->breakfile = new Config($this->getDataFolder() . "/breaks.yml", Config::YAML);
   }
    public function OnBreak(BlockBreakEvent $event){
+     if($event->getBlock()->GetId() == 1){
    $name = $event->getPlayer()->getName();
    $inventory = $event->getPlayer()->getInventory();
    $breaks = $this->breakfile->get($name);
