@@ -33,19 +33,19 @@ class Main extends PluginBase implements Listener {
           $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
           $event->getPlayer()->sendMessage("§aMining level now level 1! Check your inventory for a reward!");
           $inventory->addItem(Item::get(384,0,24));
-        if($breaks = 45){
+        if($breaks == 45){
           $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
           $event->getPlayer()->sendMessage("§aMining level now level 2! Check your inventory for a reward!");
           $inventory->addItem(Item::get(265,0,9));
-        if($breaks = 60){
+        if($breaks == 60){
           $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
           $event->getPlayer()->sendMessage("§aMining Level now level 3! Check your inventory for a reward!");
           $inventory->addItem(Item::get(339,750,1));
-        if($breaks = 100){
+        if($breaks == 100){
           $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
           $event->getPlayer()->sendMessage("§aMining Level now level 4! Check your inventory for a reward!");
           $inventory->addItem(Item::get(388,0,2));
-        if($breaks = 129){
+        if($breaks == 129){
           $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
           $event->getPlayer()->sendMessage("§aMining level now level 5! Check your inventory for a reward!");
           $event->getPlayer()->sendMessage("§bYou've reached the maximum level for the beta, but your broken blocks will still go up!");
