@@ -23,7 +23,7 @@ class Main extends PluginBase implements Listener {
           @mkdir($this->getDataFolder());
           $this->breakfile = new Config($this->getDataFolder() . "/breaks.yml", Config::YAML);
   }
-   public function OnBreak(BlockBreakEvent $event){
+     public function OnBreak(BlockBreakEvent $event){
      if($event->getBlock()->GetId() == 1){
    $name = $event->getPlayer()->getName();
    $inventory = $event->getPlayer()->getInventory();
@@ -57,7 +57,8 @@ class Main extends PluginBase implements Listener {
       }
      }
   }
-   public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
+ }
+     public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
         if(strtolower($cmd->getName()) == "mining"){
           if($s instanceof Player){
           if(count($args) == 0) {
