@@ -23,7 +23,7 @@ class Main extends PluginBase implements Listener {
           @mkdir($this->getDataFolder());
           $this->breakfile = new Config($this->getDataFolder() . "/breaks.yml", Config::YAML);
   }
-  public function OnBreak(BlockBreakEvent $event){
+   public function OnBreak(BlockBreakEvent $event){
    $name = $event->getPlayer()->getName();
    $inventory = $player->getInventory();
    $breaks = $this->breakfile->get($name);
@@ -47,7 +47,11 @@ class Main extends PluginBase implements Listener {
           $event->getPlayer()->sendMessage("§bCONGRATS! You reached the max level for the Beta! More mining levels to come in the next update!");
           $inventory->addItem(Item::get(364,0,10));
         }
-  public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
+       }
+      }
+     }
+  }
+   public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
         if(strtolower($cmd->getName()) == "mining"){
           if($s instanceof Player){
           if(count($args) == 0) {
