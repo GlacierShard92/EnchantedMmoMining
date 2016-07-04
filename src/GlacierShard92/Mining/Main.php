@@ -25,26 +25,32 @@ class Main extends PluginBase implements Listener {
   }
    public function OnBreak(BlockBreakEvent $event){
    $name = $event->getPlayer()->getName();
+   $inventory = $event->getPlayer()->getInventory();
    $breaks = $this->breakfile->get($name);
        $this->breakfile->set($name,$breaks+1);
        $this->breakfile->save();
        if($breaks == 20){
           $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
-          $event->getPlayer()->sendMessage("§aMining level now level 1! You've recieved 10 xp bottles!");
-          $player->getInventory->addItem(Item::get(384,0,10));
+          $event->getPlayer()->sendMessage("§aMining level now level 1! Check your inventory for a reward!");
+          $inventory->addItem(Item::get(384,0,24));
         if($breaks = 45){
           $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
-          $event->getPlayer()->sendMessage("§aMining level now level 2! You've recieved 5 iron ingots!");
-          $player->getInventory->addItem(Item::get(265,0,5));
+          $event->getPlayer()->sendMessage("§aMining level now level 2! Check your inventory for a reward!");
+          $inventory->addItem(Item::get(265,0,9));
         if($breaks = 60){
           $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
-          $event->getPlayer()->sendMessage("§aMining Level now level 3! You've recieved 3 Basic Crate Keys!");
-          $player->getInventory->addItem(Item::get(341,0,3));
+          $event->getPlayer()->sendMessage("§aMining Level now level 3! Check your inventory for a reward!");
+          $inventory->addItem(Item::get(339,750,1));
         if($breaks = 100){
           $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
-          $event->getPlayer()->sendMessage("§aMining Level now level 4! You've recieved 10 Diamonds!");
-          $event->getPlayer()->sendMessage("§bCONGRATS! You reached the max level for the Beta! More mining levels to come in the next update!");
-          $player->getInventory->addItem(Item::get(364,0,10));
+          $event->getPlayer()->sendMessage("§aMining Level now level 4! Check your inventory for a reward!");
+          $inventory->addItem(Item::get(388,0,2));
+        if($breaks = 129){
+          $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
+          $event->getPlayer()->sendMessage("§aMining level now level 5! Check your inventory for a reward!");
+          $event->getPlayer()->sendMessage("§bYou've reached the maximum level for the beta, but your broken blocks will still go up!");
+          $inventory->addItem(Item::get(264,0,10));
+        }
         }
        }
       }
