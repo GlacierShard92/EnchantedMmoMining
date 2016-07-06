@@ -1,8 +1,8 @@
-name: MiningMcmmoERPE
+name: EnchantedMMOMining
 main: GlacierShard92\Mining\Main
-version: 1.0.0
+version: 1.0.1
 api: 2.0.0
 author: GlacierShard92
 commands:
   mining:
-   description: Shows your Mining MCMMO!
+   description: Main mining command!
