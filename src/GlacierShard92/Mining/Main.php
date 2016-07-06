@@ -84,9 +84,6 @@ class Main extends PluginBase implements Listener {
      }
      }
     }
-  }
-  }
-  }
       public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
         switch(strtolower($cmd->getName())) {
           case "mining":
