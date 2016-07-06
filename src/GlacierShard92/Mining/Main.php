@@ -30,33 +30,63 @@ class Main extends PluginBase implements Listener {
    $breaks = $this->breakfile->get($name);
        $this->breakfile->set($name,$breaks+1);
        $this->breakfile->save();
-       if($breaks == 20){
-          $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
+       if($breaks == 45){
+          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
           $event->getPlayer()->sendMessage("§aMining level now level 1! Check your inventory for a reward!");
           $inventory->addItem(Item::get(384,0,24));
-        if($breaks == 45){
-          $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
+        if($breaks == 70){
+          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
           $event->getPlayer()->sendMessage("§aMining level now level 2! Check your inventory for a reward!");
           $inventory->addItem(Item::get(265,0,9));
-        if($breaks == 60){
-          $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
+        if($breaks == 111){
+          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
           $event->getPlayer()->sendMessage("§aMining Level now level 3! Check your inventory for a reward!");
           $inventory->addItem(Item::get(339,750,1));
-        if($breaks == 100){
-          $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
+        if($breaks == 147){
+          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
           $event->getPlayer()->sendMessage("§aMining Level now level 4! Check your inventory for a reward!");
           $inventory->addItem(Item::get(388,0,2));
-        if($breaks == 129){
-          $event->getPlayer()->sendMessage("§l§e[§r§2ERPE Mining McMMO§e§l]");
+        if($breaks == 172){
+          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
           $event->getPlayer()->sendMessage("§aMining level now level 5! Check your inventory for a reward!");
-          $event->getPlayer()->sendMessage("§bYou've reached the maximum level for the beta, but your broken blocks will still go up!");
-          $inventory->addItem(Item::get(264,0,10));
+          $inventory->addItem(Item::get(265,0,10));
+        if($breaks == 213){
+          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
+          $event->getPlayer()->sendMessage("§aMining level now level 6! Check your inventory for a reward!");
+          $inventory->addItem(Item::get(384,0,45));
+        if($breaks == 250){
+          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
+          $event->getPlayer()->sendMessage("§aMining level now level 7! Check your inventory for a reward!");
+          $inventory->addItem(Item::get(266,0,15));
+        if($breaks == 289){
+          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
+          $event->getPlayer()->sendMessage("§aMining level now level 8! Check your inventory for a reward!");
+          $inventory->addItem(Item::get(322,0,5));
+        if($breaks == 320){
+          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
+          $event->getPlayer()->sendMessage("§aMining level now level 9! Check your inventory for a reward!");
+          $inventory->addItem(Item::get(339,2000,1));
+        if($breaks == 343){
+          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
+          $event->getPlayer()->sendMessage("§aMining level now level 10! Check your inventory for a reward!");
+          $event->getPlayer()->sendMessage("§bCONGRATS! You've reached the max level for v1.0.1! There will be alot more in v1.0.2!");
+          $inventory->addItem(Item::get(264,0,12));
+        }
+        }
+        }
+        }
+        }
+        }
+        }
         }
         }
        }
-      }
      }
-  }
+     }
+    }
+   }
+ }
+ }
  }
      public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
         switch(strtolower($cmd->getName())) {
@@ -89,7 +119,13 @@ class Main extends PluginBase implements Listener {
             break;
           }
           if(isset($args[0]) && strtolower($args[0]) == "top") {
+           $s->sendMessage("§e§l<§r§2EnchantedMMO MINING Top§e§l>");
            $s->sendMessage("§cThis has not been added yet! This will be added in§e v1.0.2!");
+           $s->sendMessage("§e§l[§r§21§e§l]:§r§c N/A");
+           $s->sendMessage("§e§l[§r§22§e§l]:§r§c N/A");
+           $s->sendMessage("§e§l[§r§23§e§l]:§r§c N/A");
+           $s->sendMessage("§e§l[§r§24§e§l]:§r§c N/A");
+           $s->sendMessage("§e§l[§r§25§e§l]:§r§c N/A");
            break;
           }
         }
