@@ -59,7 +59,7 @@ class Main extends PluginBase implements Listener {
   }
  }
      public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
-        switch(strtolower($command->getName())) {
+        switch(strtolower($cmd->getName())) {
           case "mining":
             if(empty($args[0])){
               $s->sendMessage("§eUse §2/mining help§e!");
