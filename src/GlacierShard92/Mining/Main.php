@@ -105,7 +105,7 @@ class Main extends PluginBase implements Listener {
             $breaks = $this->breakfile->get($s->getName());
             $s->sendMessage("§e§l<§r§2EnchantedMMO MINING Stats§e§l>");
             $s->sendMessage("§e§lAmount of Stone You Have Broken:");
-            $s->sendMessage("§2 " . $breaks);
+            $s->sendMessage("§b§l " . $breaks);
             break;
           }
           if(isset($args[0]) && strtolower($args[0]) == "version") {
