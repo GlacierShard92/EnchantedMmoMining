@@ -71,18 +71,19 @@ class Main extends PluginBase implements Listener {
                               $event->getPlayer()->sendMessage("§aMining level now level 10! Check your inventory for a reward!");
                               $event->getPlayer()->sendMessage("§bCONGRATS! You've reached the max level for v1.0.1! There will be alot more in v1.0.2!");
                               $inventory->addItem(Item::get(264,0,12));
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-       }
-     }
-  }
+                           }
+                         }
+                       }
+                     }
+                   }
+                 }
+               }
+             }
+           }
+        }
+      }
+    }
+    
   public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
         switch(strtolower($cmd->getName())) {
           case "mining":
