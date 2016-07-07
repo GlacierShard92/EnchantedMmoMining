@@ -88,10 +88,14 @@ class Main extends PluginBase implements Listener {
         switch(strtolower($cmd->getName())) {
           case "mining":
             if(empty($args[0])){
-              $s->sendMessage("§eUse §2/mining help§e!");
+              $s->sendMessage("§e§l========");
+              $s->sendMessage("§e§l<§r§2EnchantedMMO Mining§e§l>");
+              $s->sendMessage("§eCouldn't find a subcommand. Use §2/mining help§e!");
+              $s->sendMessage("§e§l========");
               break;
             }
             if(isset($args[0]) && strtolower($args[0]) == "help") {
+              $s->sendMessage("§e§l======");
               $s->sendMessage("§e§l<§r§2EnchantedMMO MINING Help§e§l>");
               $s->sendMessage("§e/mining help§2 - Displays this!");
               $s->sendMessage("§e/mining stats§2 - Displays the amount of stone you've broken!");
@@ -99,22 +103,28 @@ class Main extends PluginBase implements Listener {
               $s->sendMessage("§e/mining version§2 - Displays the version of the plugin!");
               $s->sendMessage("§e/mining top§2 - Displays the top players! §e[COMING IN v1.0.2]");
               $s->sendMessage("§bCreated by GlacierShard92/Its_Joey_Yall & applqpak!");
+              $s->sendMessage("§e§l======");
               break;
             }
             if(isset($args[0]) && strtolower($args[0]) == "stats") {
             $breaks = $this->breakfile->get($s->getName());
+            $s->sendMessage("§e§l======");
             $s->sendMessage("§e§l<§r§2EnchantedMMO MINING Stats§e§l>");
             $s->sendMessage("§e§lAmount of Stone You Have Broken:");
             $s->sendMessage("§b§l " . $breaks);
+            $s->sendMessage("§e§l======");
             break;
           }
           if(isset($args[0]) && strtolower($args[0]) == "version") {
+            $s->sendMessage("§e§l======");
             $s->sendMessage("§e§l<§r§2EnchantedMMO MINING Version§e§l>");
             $s->sendMessage("§9E§2R§9P§2E§b is using EnchantedMMO Mining v1.0.1 by:");
             $s->sendMessage("§aGlacierShard92/Its_Joey_Yall & applqpak!");
+            $s->sendMessage("§e§l======");
             break;
           }
           if(isset($args[0]) && strtolower($args[0]) == "top") {
+           $s->sendMessage("§e§l======");
            $s->sendMessage("§e§l<§r§2EnchantedMMO MINING Top§e§l>");
            $s->sendMessage("§cThis has not been added yet! This will be added in§e v1.0.2!");
            $s->sendMessage("§e§l[§r§21§e§l]:§r§c N/A");
@@ -122,6 +132,7 @@ class Main extends PluginBase implements Listener {
            $s->sendMessage("§e§l[§r§23§e§l]:§r§c N/A");
            $s->sendMessage("§e§l[§r§24§e§l]:§r§c N/A");
            $s->sendMessage("§e§l[§r§25§e§l]:§r§c N/A");
+           $s->sendMessage("§e§l======");
            break;
           }
         }
