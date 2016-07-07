@@ -23,7 +23,7 @@ class Main extends PluginBase implements Listener {
           @mkdir($this->getDataFolder());
           $this->breakfile = new Config($this->getDataFolder() . "/breaks.yml", Config::YAML);
   }
-      public function OnBreak(BlockBreakEvent $event){
+  public function OnBreak(BlockBreakEvent $event){
      if($event->getBlock()->GetId() == 1){
    $name = $event->getPlayer()->getName();
    $inventory = $event->getPlayer()->getInventory();
@@ -34,58 +34,56 @@ class Main extends PluginBase implements Listener {
           $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
           $event->getPlayer()->sendMessage("§aMining level now level 1! Check your inventory for a reward!");
           $inventory->addItem(Item::get(384,0,24));
-        if($breaks == 70){
-          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
-          $event->getPlayer()->sendMessage("§aMining level now level 2! Check your inventory for a reward!");
-          $inventory->addItem(Item::get(265,0,9));
-        if($breaks == 111){
-          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
-          $event->getPlayer()->sendMessage("§aMining Level now level 3! Check your inventory for a reward!");
-          $inventory->addItem(Item::get(339,750,1));
-        if($breaks == 147){
-          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
-          $event->getPlayer()->sendMessage("§aMining Level now level 4! Check your inventory for a reward!");
-          $inventory->addItem(Item::get(388,0,2));
-        if($breaks == 172){
-          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
-          $event->getPlayer()->sendMessage("§aMining level now level 5! Check your inventory for a reward!");
-          $inventory->addItem(Item::get(265,0,10));
-        if($breaks == 213){
-          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
-          $event->getPlayer()->sendMessage("§aMining level now level 6! Check your inventory for a reward!");
-          $inventory->addItem(Item::get(384,0,45));
-        if($breaks == 250){
-          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
-          $event->getPlayer()->sendMessage("§aMining level now level 7! Check your inventory for a reward!");
-          $inventory->addItem(Item::get(266,0,15));
-        if($breaks == 289){
-          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
-          $event->getPlayer()->sendMessage("§aMining level now level 8! Check your inventory for a reward!");
-          $inventory->addItem(Item::get(322,0,5));
-        if($breaks == 320){
-          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
-          $event->getPlayer()->sendMessage("§aMining level now level 9! Check your inventory for a reward!");
-          $inventory->addItem(Item::get(339,2000,1));
-        if($breaks == 343){
-          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
-          $event->getPlayer()->sendMessage("§aMining level now level 10! Check your inventory for a reward!");
-          $event->getPlayer()->sendMessage("§bCONGRATS! You've reached the max level for v1.0.1! There will be alot more in v1.0.2!");
-          $inventory->addItem(Item::get(264,0,12));
-        }
-        }
-        }
-        }
-        }
-        }
-        }
-        }
-        }
+          if($breaks == 70){
+              $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
+              $event->getPlayer()->sendMessage("§aMining level now level 2! Check your inventory for a reward!");
+              $inventory->addItem(Item::get(265,0,9));
+            if($breaks == 111){
+                $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
+                $event->getPlayer()->sendMessage("§aMining Level now level 3! Check your inventory for a reward!");
+                $inventory->addItem(Item::get(339,750,1));
+              if($breaks == 147){
+                  $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
+                  $event->getPlayer()->sendMessage("§aMining Level now level 4! Check your inventory for a reward!");
+                  $inventory->addItem(Item::get(388,0,2));
+                if($breaks == 172){
+                    $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
+                    $event->getPlayer()->sendMessage("§aMining level now level 5! Check your inventory for a reward!");
+                    $inventory->addItem(Item::get(265,0,10));
+                  if($breaks == 213){
+                      $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
+                      $event->getPlayer()->sendMessage("§aMining level now level 6! Check your inventory for a reward!");
+                      $inventory->addItem(Item::get(384,0,45));
+                    if($breaks == 250){
+                        $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
+                        $event->getPlayer()->sendMessage("§aMining level now level 7! Check your inventory for a reward!");
+                        $inventory->addItem(Item::get(266,0,15));
+                      if($breaks == 289){
+                          $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
+                          $event->getPlayer()->sendMessage("§aMining level now level 8! Check your inventory for a reward!");
+                          $inventory->addItem(Item::get(322,0,5));
+                        if($breaks == 320){
+                            $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
+                            $event->getPlayer()->sendMessage("§aMining level now level 9! Check your inventory for a reward!");
+                            $inventory->addItem(Item::get(339,2000,1));
+                          if($breaks == 343){
+                              $event->getPlayer()->sendMessage("§l§e<§r§2EnchantedMMO Mining§e§l>");
+                              $event->getPlayer()->sendMessage("§aMining level now level 10! Check your inventory for a reward!");
+                              $event->getPlayer()->sendMessage("§bCONGRATS! You've reached the max level for v1.0.1! There will be alot more in v1.0.2!");
+                              $inventory->addItem(Item::get(264,0,12));
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
        }
      }
-     }
-    }
-    }
-      public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
+  }
+  public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
         switch(strtolower($cmd->getName())) {
           case "mining":
             if(empty($args[0])){
